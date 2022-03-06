@@ -35,7 +35,7 @@
 // }
 
 enum Role { ADMIN = 1, READ_ONLY, AUTHOR }//assigns labels to numbers
-
+type Combinable = number | string//custom type alias
 
 const person = {
     name: "Milo",
@@ -48,7 +48,7 @@ let favoriteActivities: string[]
 
 console.log(person.name)
 
-function combine(input1: number | string, input2: number | string) {
+function combine(input1: Combinable, input2: Combinable) {
     let result
     if(typeof input1 === 'number' && typeof input2 === 'number'){
         result = input1 + input2
